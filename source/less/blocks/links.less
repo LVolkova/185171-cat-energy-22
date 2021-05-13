@@ -2,6 +2,17 @@
   background-color: @basic-gray;
 }
 
+.links__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .links__our-company {
   display: block;
   padding-top: 39px;

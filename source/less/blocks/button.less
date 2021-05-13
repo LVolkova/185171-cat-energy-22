@@ -2,13 +2,19 @@
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
-  min-width: 280px;
   text-transform: uppercase;
   color: @text-light;
   background-color: @basic-green;
   text-align: center;
   box-sizing: border-box;
-  padding: 13px 44px;
+  padding: 7px 44px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    min-width: 244px;
+    padding: 14px 26px;
+  }
 }
 
 .button--min {
