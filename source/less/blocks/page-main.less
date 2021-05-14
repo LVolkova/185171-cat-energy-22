@@ -2,10 +2,37 @@
   line-height: 36px;
   margin-top: 27px;
   margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 65px;
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 60px;
+  }
 }
 
 .page-main__intro {
   text-transform: uppercase;
   color: @text-title;
   margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 39px;
+  }
+}
+
+.page-main__intro--form {
+  @media (min-width: @tablet-width) {
+    width: 323px;
+    min-height: 60px;
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 66px;
+  }
 }

@@ -2,37 +2,40 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
 
     <header class="page-header">
-      <div class="container">
-        <a href="index.html" class="page-header__logo">
-          <img src="img/logo-mobile.svg" alt="Логотип магазина Cat Energy" width="34" height="38">
-          <img src="img/brend.svg" alt="Cat Energy" width="110" height="18">
-        </a>
-        <nav class="main-nav">
+      <nav class="main-nav container">
+
+        <div class="main-nav__block">
+          <a href="index.html" class="main-nav__logo logo">
+            <img class="logo__image" src="img/logo-mobile.svg" alt="Логотип магазина Cat Energy" width="34" height="38">
+            <img class="logo__name" src="img/brend.svg" alt="Cat Energy" width="110" height="18">
+          </a>
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="index.html">Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="main-nav__item main-nav__item--current">
-                <a class="main-nav__link">Подбор программы</a>
-              </li>
-            </ul>
-        </nav>
-      </div>
+        </div>
+
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--form" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--form" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item main-nav__item--current">
+            <a class="main-nav__link main-nav__link--form" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <main class="page-main">
+    <main class="page-main container">
       <h1 class="page-main__title text-title">Подбор программы</h1>
-      <p class="page-main__intro">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="page-main__intro page-main__intro--form">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
       <section class="form-section">
         <h2 class="visually-hidden">Анкета для подбора питания</h2>
@@ -74,16 +77,16 @@
             </ul>
           </fieldset>
 
-          <fieldset class="form__block cat-profile">
-            <legend class="form__legend cat-profile__legend">Контактные данные (владельца кота)</legend>
-            <ul class="form__list cat-profile__list">
-              <li class="cat-profile__item">
-                <label class="cat-profile__label" for="email">e-mail:*</label>
-                <input class="cat-profile__input" type="email" id="email" placeholder="kuklachev@gmail.com" required>
+          <fieldset class="form__block cat-owner">
+            <legend class="form__legend cat-owner__legend">Контактные данные (владельца кота)</legend>
+            <ul class="form__list cat-owner__list">
+              <li class="cat-owner__item">
+                <label class="cat-owner__label" for="email">e-mail:*</label>
+                <input class="cat-owner__input" type="email" id="email" placeholder="kuklachev@gmail.com" required>
               </li>
-              <li class="cat-profile__item">
-                <label class="cat-profile__label" for="tel">Телефон:*</label>
-                <input class="cat-profile__input" type="tel" id="tel" placeholder="8 (960) 900-60-90" required>
+              <li class="cat-owner__item">
+                <label class="cat-owner__label" for="tel">Телефон:*</label>
+                <input class="cat-owner__input" type="tel" id="tel" placeholder="8 (960) 900-60-90" required>
               </li>
             </ul>
           </fieldset>
@@ -116,27 +119,29 @@
             </ul>
           </fieldset>
 
-          <button class="form__button button" type="submit">Отправить заявку</button>
-          <p class="form__comment">* — Обязательные поля</p>
+          <div class="form__note">
+            <button class="form__button button" type="submit">Отправить заявку</button>
+            <p class="form__comment">* — Обязательные поля</p>
+          </div>
         </form>
 
       </section>
 
     </main>
 
-    <footer class="page-footer">
-      <div class="container">
+    <footer class="page-footer page-footer--gray">
 
-        <div class="page-footer__contacts contacts">
-          <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts__text">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</p>
-        </div>
+      <div class="page-footer__contacts contacts container">
+        <p class="contacts__title">Приглашаем <br>к сотрудничеству дилеров!</p>
+        <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 <span class="contacts__town">Санкт-Петербург</span></p>
+      </div>
 
-        <div class="page-footer__map map">
-          <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa2be5d25f50f09208cca257403f20f8045a5aef1ec22988fcb36ea76fda191bc&amp;source=constructor" style="width: 100%; height: 362px;" allowfullscreen title="Офис компании по адресу г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8"></iframe>
-        </div>
+      <div class="page-footer__map map">
+        <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa2be5d25f50f09208cca257403f20f8045a5aef1ec22988fcb36ea76fda191bc&amp;source=constructor" style="width: 100%; height: 362px;" allowfullscreen title="Офис компании по адресу г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8"></iframe>
+      </div>
 
-        <div class="page-footer__links links">
+      <div class="page-footer__links links">
+        <div class="links__wrapper container">
           <a class="links__our-company">
             <img src="img/brend.svg" alt="Cat Energy" width="110" height="18">
           </a>
@@ -157,9 +162,9 @@
             <a class="copyright__link common-text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </div>
         </div>
-
       </div>
-    </footer>
+
+  </footer>
 
   </body>
 </html>
