@@ -1,8 +1,22 @@
+.form {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    column-gap: 80px;
+  }
+}
+
 .form__block {
   border: none;
   font-size: 16px;
   text-transform: uppercase;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__list {
@@ -17,14 +31,46 @@
   line-height: 26px;
   color: @text-title;
   margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0;
+  }
+}
+
+.form__note {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    display: flex;
+    margin-bottom: 72px;
+  }
 }
 
 .form__button {
+  width: 100%;
   padding: 7px 44px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    padding: 13px 55px;
+    margin-right: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 568px;
+    padding: 13px 188px;
+    margin-right: 81px;
+  }
 }
 
 .form__comment {
   font-family: @arial;
   line-height: 16px;
   color: @text-title;
+  text-align: center;
 }
