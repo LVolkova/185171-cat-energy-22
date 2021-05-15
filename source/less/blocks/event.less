@@ -1,12 +1,44 @@
 .event {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+
   font-family: @arial;
   font-size: 16px;
   line-height: 20px;
   color: @text-light;
   text-align: center;
-  min-height: 289px;
+  height: 289px;
   width: 280px;
   background:
     url("../img/event-icon.svg") no-repeat center 58px,
     @basic-green url("../img/event-cat.png") no-repeat;
+  padding: 186px 60px 0;
+  margin-bottom: 35px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    height: 200px;
+    background:
+      url("../img/event-icon.svg") no-repeat 75px center,
+      @basic-green url("../img/event-cat-max.png") no-repeat center center;
+    object-fit: cover;
+    text-align: left;
+    padding: 70px 124px 70px 422px;
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 289px;
+    background:
+      url("../img/event-icon.svg") no-repeat center 58px,
+      @basic-green url("../img/event-cat.png") no-repeat;
+    text-align: center;
+    margin: 0;
+    padding: 175px 42px 0;
+    box-sizing: border-box;
+  }
 }
