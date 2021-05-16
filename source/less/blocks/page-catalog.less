@@ -1,0 +1,18 @@
+.page-catalog {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 245px;
+    grid-template-rows: repeat(4, auto);
+    column-gap: 79px;
+    margin-bottom: 86px;
+  }
+}
+
+.page-catalog__title {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
