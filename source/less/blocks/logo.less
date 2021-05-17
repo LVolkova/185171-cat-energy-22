@@ -1,9 +1,32 @@
 .logo {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .logo__image {
   margin-right: 50px;
+}
+
+.logo__name {
+  align-self: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: flex-end;
+    padding-top: 0;
+    padding-bottom: 7px;
+  }
 }
