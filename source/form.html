@@ -9,7 +9,7 @@
   <body class="page__body">
 
     <header class="page-header">
-      <nav class="main-nav container">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
 
         <div class="main-nav__block">
           <a href="index.html" class="main-nav__logo logo">
@@ -63,15 +63,15 @@
             <legend class="visually-hidden">Цель программы</legend>
             <ul class="form__list program-selection__list">
               <li class="program-selection__item">
-                <input class="program-selection__input" type="radio" name="program" id="program-slim" checked>
+                <input class="program-selection__input visually-hidden" type="radio" name="program" id="program-slim" checked>
                 <label class="program-selection__label" for="program-slim">Похудение</label>
               </li>
               <li class="program-selection__item">
-                <input class="program-selection__input" type="radio" name="program" id="program-pro">
+                <input class="program-selection__input visually-hidden" type="radio" name="program" id="program-pro">
                 <label class="program-selection__label" for="program-pro">Набор массы</label>
               </li>
               <li class="program-selection__item">
-                <input class="program-selection__input" type="radio" name="program" id="program-query">
+                <input class="program-selection__input visually-hidden" type="radio" name="program" id="program-query">
                 <label class="program-selection__label" for="program-query">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
@@ -94,26 +94,26 @@
           <fieldset class="form__block comment">
             <legend class="form__legend comment__legend">Комментарий</legend>
             <label class="visually-hidden" for="comment">Дополнительная информация о коте</label>
-            <textarea class="comment__input" name="comment" id="comment" cols="40" rows="5">Расскажите обо всех повадках кота</textarea>
+            <textarea class="comment__input" name="comment" id="comment" cols="40" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
           <fieldset class="form__block program-features">
             <legend class="form__legend program-features__legend">Дополнительно</legend>
             <ul class="form__list program-features__list">
               <li class="program-features__item">
-                <input class="program-features__input" type="checkbox" name="sugar" id="sugar" checked>
+                <input class="program-features__input visually-hidden" type="checkbox" name="sugar" id="sugar" checked>
                 <label class="program-features__label" for="sugar">Cахарозаменитель</label>
               </li>
               <li class="program-features__item">
-                <input class="program-features__input" type="checkbox" name="water" id="water">
+                <input class="program-features__input visually-hidden" type="checkbox" name="water" id="water">
                 <label class="program-features__label" for="water">Питьевая вода</label>
               </li>
               <li class="program-features__item">
-                <input class="program-features__input" type="checkbox" name="milk" id="milk">
+                <input class="program-features__input visually-hidden" type="checkbox" name="milk" id="milk">
                 <label class="program-features__label" for="milk">Молоко</label>
               </li>
               <li class="program-features__item">
-                <input class="program-features__input" type="checkbox" name="vitamins" id="vitamins">
+                <input class="program-features__input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
                 <label class="program-features__label" for="vitamins">Витамины</label>
               </li>
             </ul>
@@ -165,6 +165,23 @@
       </div>
 
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
 
   </body>
 </html>

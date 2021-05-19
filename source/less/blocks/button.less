@@ -9,8 +9,7 @@
   box-sizing: border-box;
   padding: 7px 44px;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: #5eaa2f;
   }
 
@@ -19,8 +18,6 @@
   }
 
   @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 20px;
     width: 244px;
     padding: 14px 26px;
   }
@@ -34,4 +31,13 @@
   color: @text;
   background-color: @basic-gray;
   padding: 10px 94px;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: rgba(68, 68, 68, 0.3);
+  }
 }

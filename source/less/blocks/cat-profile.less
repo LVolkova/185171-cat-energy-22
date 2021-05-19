@@ -34,11 +34,17 @@
   margin-left: 12px;
   box-sizing: border-box;
 
-  @media (min-width: @tablet-width) {
-    padding-top: 10px;
+  &:hover {
+    border: @input-hover;
+  }
+
+  &:focus {
+    outline: none;
+    border: @input-focus;
   }
 }
 
+.cat-profile__input,
 .cat-profile__input::placeholder {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -49,4 +55,8 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
   }
+}
+
+.cat-profile__input::placeholder {
+  padding: 0;
 }

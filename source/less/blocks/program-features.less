@@ -24,27 +24,77 @@
 }
 
 .program-features__item {
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
   @media (min-width: @tablet-width) {
     width: 221px;
     min-height: 40px;
     margin-right: 123px;
+    margin-bottom: 25px;
   }
 
   @media (min-width: @desktop-width) {
     margin-right: 0;
-  }
-}
 
-.program-features__item:not(:nth-child(4n)) {
-  @media (min-width: @desktop-width) {
-    margin-right: 104px;
+    &:not(:nth-child(4n)) {
+      margin-right: 104px;
+    }
   }
-}
-
-.program-features__item:not(:last-child) {
-  margin-bottom: 20px;
 }
 
 .program-features__label {
+  position: relative;
   color: @text-title;
+  padding-left: 46px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 59px;
+  }
+}
+
+.program-features__label::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: @input-dark;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    top: -5px;
+  }
+}
+
+.program-features__input:checked + .program-features__label::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 14px;
+  top: 5px;
+  left: 6px;
+  background: url("../img/check-mark.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 8px;
+    left: 11px;
+  }
+}
+
+.program-features__input:hover + .program-features__label::before,
+.program-features__input:focus + .program-features__label::before {
+  border: @input-hover;
+}
+
+.program-features__input:disabled + .program-features__label {
+  opacity: 0.3;
+
+  &::before {
+    border: @input-hover;
+  }
 }

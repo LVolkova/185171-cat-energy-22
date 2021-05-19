@@ -17,15 +17,74 @@
 
   @media (min-width: @desktop-width) {
     border: @input;
-    padding: 20px 0 7px 28px;
+    padding: 30px 0 7px 28px;
   }
 }
 
 .program-selection__item {
   color: @text-accent;
-  margin-bottom: 13px;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 18px;
+    margin-bottom: 23px;
+  }
+}
+
+.program-selection__label {
+  position: relative;
+  padding-left: 45px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 89px;
+  }
+}
+
+.program-selection__label::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: @input-dark;
+  border-radius: 50%;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    left: 28px;
+  }
+}
+
+.program-selection__input:checked + .program-selection__label::after {
+  content: "";
+  position: absolute;
+  width: 13.5px;
+  height: 13.5px;
+  background-color: @basic-green;
+  border-radius: 50%;
+  top: 5px;
+  left: 8.4px;
+
+  @media (min-width: @tablet-width) {
+    width: 18.2px;
+    height: 18.2px;
+    top: 7.5px;
+    left: 39.45px;
+  }
+}
+
+.program-selection__input:hover + .program-selection__label::before,
+.program-selection__input:focus + .program-selection__label::before {
+  border: @input-hover;
+}
+
+.program-selection__input:disabled + .program-selection__label {
+  opacity: 0.3;
+
+  &::before {
+    border: @input-hover;
   }
 }

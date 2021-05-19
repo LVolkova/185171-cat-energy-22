@@ -79,6 +79,12 @@
   padding-bottom: 24px;
   border-top: 1px solid #e6e6e6;
 
+  @media (max-width: @mobile-width-only) {
+    &:last-child {
+      border-bottom: 1px solid #e6e6e6;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     height: 36px;
     font-size: 18px;
@@ -143,6 +149,8 @@
 
 
 .main-nav__toggle {
+  width: 18px;
+  height: 18px;
   border: none;
   background-color: transparent;
   cursor: pointer;
