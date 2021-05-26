@@ -1,6 +1,18 @@
+.manual {
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-bottom: none;
+  }
+}
+
 .manual__list {
   display: flex;
   flex-direction: column;
+  row-gap: 85px;
 
   list-style: none;
   padding: 0;
@@ -14,10 +26,10 @@
 }
 
 .manual__title {
-  margin: 27px 0 38px 0;
+  margin: 29px 0 40px 0;
 
   @media (min-width: @tablet-width) {
-    margin: 45px 0 72px 0;
+    margin: 14px 0 72px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -29,15 +41,15 @@
   display: flex;
   position: relative;
   width: 201px;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
   margin-left: 80px;
   align-items: flex-end;
 
   @media (min-width: @tablet-width) {
-    width: 230px;
+    width: 245px;
     min-height: 230px;
     margin-left: 0;
-    margin-bottom: 75px;
+    margin-bottom: 0;
     padding-bottom: 45px;
     box-sizing: border-box;
   }
@@ -45,7 +57,7 @@
 
 .manual__item:not(:nth-child(2n)) {
   @media (min-width: @tablet-width) {
-    margin-right: 188px;
+    margin-right: 138px;
   }
 
   @media (min-width: @desktop-width) {
@@ -55,13 +67,14 @@
 
 .manual__item:not(:nth-child(4n)) {
   @media (min-width: @desktop-width) {
-    margin-right: 100px;
+    margin-right: 75px;
   }
 }
 
 .manual__item::before {
   content: "";
   position: absolute;
+  top: -2px;
   left: -80px;
   width: 60px;
   height: 60px;
@@ -76,32 +89,35 @@
 }
 
 .manual__item--healthy::before {
-  background-image: url("../img/icon_leaf.png");
+  background-image: url("../img/icon_leaf.svg");
 }
 
 .manual__item--simple::before {
-  background-image: url("../img/icon_tub.png");
+  background-image: url("../img/icon_tub.svg");
 }
 
 .manual__item--one-meal::before {
-  background-image: url("../img/icon_eat.png");
+  background-image: url("../img/icon_eat.svg");
 }
 
 .manual__item--result::before {
-  background-image: url("../img/icon_alarm.png");
+  background-image: url("../img/icon_alarm.svg");
 }
 
 @media (min-width: @tablet-width) {
   .manual__item--healthy {
     background: url("../img/step-one.svg") no-repeat right center;
+    background-position: 125px 0;
   }
 
   .manual__item--simple {
     background: url("../img/step-two.svg") no-repeat right center;
+    background-position: 123px 0;
   }
 
   .manual__item--one-meal {
     background: url("../img/step-three.svg") no-repeat right center;
+    background-position: 125px 0;
   }
 
   .manual__item--result {

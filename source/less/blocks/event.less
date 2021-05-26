@@ -14,9 +14,16 @@
   background:
     url("../img/event-icon.svg") no-repeat center 58px,
     @basic-green url("../img/event-cat.png") no-repeat;
-  padding: 186px 60px 0;
-  margin-bottom: 35px;
+  padding: 186px 50px 0;
+  margin: 45px 0 35px 0;
   box-sizing: border-box;
+
+  @media (min-resolution: 2dppx) {
+    background:
+      url("../img/event-icon.svg") no-repeat center 58px,
+      @basic-green url("../img/event-cat@2x.png") no-repeat;
+    background-size: 78px 80px, cover;
+  }
 
   @media (min-width: @tablet-width) {
     width: 708px;
@@ -24,10 +31,16 @@
     background:
       url("../img/event-icon.svg") no-repeat 75px center,
       @basic-green url("../img/event-cat-max.png") no-repeat center center;
-    object-fit: cover;
     text-align: left;
     padding: 70px 124px 70px 422px;
     margin-bottom: 76px;
+
+    @media (min-resolution: 2dppx) {
+      background:
+        url("../img/event-icon.svg") no-repeat 75px center,
+        @basic-green url("../img/event-cat-max@2x.png") no-repeat center center;
+      background-size: 80px 83px, cover;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -40,5 +53,12 @@
     margin: 0;
     padding: 175px 42px 0;
     box-sizing: border-box;
+
+    @media (min-resolution: 2dppx) {
+      background:
+        url("../img/event-icon.svg") no-repeat center 58px,
+        @basic-green url("../img/event-cat@2x.png") no-repeat;
+      background-size: 80px 83px, cover;
+    }
   }
 }

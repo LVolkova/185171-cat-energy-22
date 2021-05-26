@@ -1,5 +1,5 @@
 .cat-owner {
-  margin: 9px 0;
+  margin: 25px 0 11px 0;
 
   @media (min-width: @tablet-width) {
     margin: 60px 0 0 0;
@@ -11,6 +11,20 @@
     grid-row-start: 2;
     grid-row-end: 3;
     margin: 0;
+  }
+}
+
+.cat-owner__legend {
+  width: 187px;
+
+  @media (min-width: @tablet-width) {
+    width: 512px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    padding-left: 40px;
+    left: -40px;
   }
 }
 
@@ -40,11 +54,12 @@
 }
 
 .cat-owner__input {
+  position: relative;
   border: @input;
   height: 45px;
   flex-grow: 2;
 
-  margin-left: 12px;
+  margin-left: 11px;
   box-sizing: border-box;
 
   &:hover {
@@ -63,7 +78,7 @@
   font-size: 16px;
   text-transform: uppercase;
   color: @text;
-  padding-left: 15px;
+  padding-left: 14px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -72,4 +87,26 @@
 
 .cat-owner__input::placeholder {
   padding: 0;
+}
+
+.cat-owner__label--email::after {
+  content: "";
+  position: absolute;
+  top: 101px;
+  right: 36px;
+  width: 18px;
+  height: 15px;
+  background: url("../img/email-icon.svg") no-repeat;
+  z-index: 5;
+}
+
+.cat-owner__label--tel::after {
+  content: "";
+  position: absolute;
+  top: 157px;
+  right: 34px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/phone-icon.svg") no-repeat;
+  z-index: 5;
 }

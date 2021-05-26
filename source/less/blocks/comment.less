@@ -7,6 +7,21 @@
   }
 }
 
+.comment__legend {
+  width: 121px;
+  padding-right: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 182px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    padding-left: 40px;
+    left: -40px;
+  }
+}
+
 .comment__input {
   width: 100%;
   font-family: "Oswald", sans-serif;
@@ -15,7 +30,8 @@
   text-align: center;
   border: @input;
   resize: none;
-  margin: 22px 0 23px 0;
+  margin: 5px 0 22px 0;
+  box-sizing: border-box;
 
   &:hover {
     border: @input-hover;
@@ -37,4 +53,5 @@
 
 .comment__input::placeholder {
   color: @text;
+  padding-top: 4px;
 }

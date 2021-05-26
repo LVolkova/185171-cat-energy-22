@@ -1,4 +1,5 @@
 .more-items {
+  position: relative;
   max-width: 280px;
   display: flex;
   flex-direction: column;
@@ -6,12 +7,26 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    max-width: 324px;
+    width: 324px;
     height: 511px;
     background: none;
     border: 2px solid @basic-gray;
     box-sizing: border-box;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
+}
+
+.more-items::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 5px;
+  left: 125px;
+  background: url("../img/plus-icon.svg") no-repeat;
 }
 
 .more-items__title {
@@ -19,7 +34,7 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @text-dark;
-  margin-top: 53px;
+  margin-top: 58px;
   margin-bottom: 8px;
   box-sizing: border-box;
 
