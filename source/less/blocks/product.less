@@ -14,7 +14,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    justify-content: flex-start;
     width: 245px;
+    margin-top: 20px;
+    height: min-content;
   }
 }
 
@@ -37,11 +40,25 @@
     line-height: 24px;
     align-self: center;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 160px;
+    padding-left: 5px;
   }
 
   @media (min-width: @desktop-width) {
     line-height: 21px;
+    margin-top: 163px;
+    padding-left: 7px;
+  }
+}
+
+.product__title--small,
+.product__title--big-chicken {
+  @media (min-width: @tablet-width) {
+    margin-top: 164px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 162px;
   }
 }
 
@@ -55,7 +72,11 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 0;
+    top: -55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -63px;
   }
 }
 
@@ -63,8 +84,18 @@
   margin-top: 8px;
 
   @media (min-width: @tablet-width) {
-    width: 161px;
-    height: auto;
+    width: 163px;
+    height: 174px;
+  }
+}
+
+.product__image--big {
+  @media (min-width: @tablet-width) {
+    top: -75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -80px;
   }
 }
 
@@ -75,12 +106,49 @@
 
   @media (min-width: @tablet-width) {
     width: 168px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 172px;
+    height: 196px;
+  }
+}
+
+.product__image--big-chicken {
+  @media (min-width: @tablet-width) {
+    top: -70px;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: -80px;
+  }
+}
+
+.product__image--big-chicken img {
+  @media (min-width: @tablet-width) {
+    width: 168px;
     height: 206px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 172px;
+    height: 201px;
   }
 }
 
 .product__image--small img {
   margin-top: -10px;
+}
+
+.product__image--small {
+  @media (min-width: @tablet-width) {
+    top: -34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -45px;
+  }
 }
 
 .product__description {
@@ -99,5 +167,9 @@
     row-gap: 14px;
     font-size: 16px;
     margin: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    row-gap: 16px;
   }
 }

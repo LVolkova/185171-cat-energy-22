@@ -8,9 +8,14 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    min-height: 145px;
+    min-height: 147px;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 35px;
   }
 }
 
@@ -20,7 +25,19 @@
   padding-bottom: 28px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 30px;
+    padding-top: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 10px;
+    padding-top: 38px;
+  }
+}
+
+.links__our-company img {
+  @media (min-width: @desktop-width) {
+    width: 128px;
+    height: 24px;
   }
 }
 

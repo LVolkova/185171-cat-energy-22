@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon180.png">
@@ -53,8 +53,8 @@
         <h2 class="visually-hidden">Анкета для подбора питания</h2>
         <form class="form-section__form form" action="https://echo.htmlacademy.ru" method="post">
 
-            <fieldset class="form__block cat-profile">
-                <div class="cat-profile__wrapper">
+            <div class="form__block cat-profile">
+              <fieldset class="cat-profile__wrapper">
                 <legend class="visually-hidden">Данные кота</legend>
                 <ul class="form__list cat-profile__list">
                   <li class="cat-profile__item">
@@ -70,11 +70,11 @@
                     <input class="cat-profile__input cat-profile__input--small" type="number" name="cat-age" id="cat-age" placeholder="7">
                   </li>
                 </ul>
-              </div>
-            </fieldset>
+              </fieldset>
+            </div>
 
-            <fieldset class="form__block program-selection">
-              <div class="program-selection__wrapper">
+            <div class="form__block program-selection">
+              <fieldset class="program-selection__wrapper">
                 <legend class="visually-hidden">Цель программы</legend>
                 <ul class="form__list program-selection__list">
                   <li class="program-selection__item">
@@ -90,11 +90,11 @@
                     <label class="program-selection__label" for="program-query">Не знаю (нужен ваш совет)</label>
                   </li>
                 </ul>
-              </div>
-            </fieldset>
+              </fieldset>
+            </div>
 
-          <fieldset class="form__block cat-owner">
-            <div class="cat-owner__wrapper page-form__container">
+          <div class="form__block cat-owner">
+            <fieldset class="cat-owner__wrapper page-form__container">
               <legend class="form__legend cat-owner__legend">Контактные данные (владельца кота)</legend>
               <ul class="form__list cat-owner__list">
                 <li class="cat-owner__item">
@@ -106,19 +106,19 @@
                   <input class="cat-owner__input" type="tel" id="tel" placeholder="8 (960) 900-60-90" required>
                 </li>
               </ul>
-            </div>
-          </fieldset>
+            </fieldset>
+          </div>
 
-          <fieldset class="form__block comment">
-            <div class="comment__wrapper page-form__container">
+          <div class="form__block comment">
+            <fieldset class="comment__wrapper page-form__container">
               <legend class="form__legend comment__legend">Комментарий</legend>
               <label class="visually-hidden" for="comment">Дополнительная информация о коте</label>
               <textarea class="comment__input" name="comment" id="comment" cols="40" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </div>
-          </fieldset>
+            </fieldset>
+          </div>
 
-          <fieldset class="form__block program-features">
-            <div class="program-features__wrapper page-form__container">
+          <div class="form__block program-features">
+            <fieldset class="program-features__wrapper page-form__container">
               <legend class="form__legend program-features__legend">Дополнительно</legend>
               <ul class="form__list program-features__list">
                 <li class="program-features__item">
@@ -138,8 +138,8 @@
                   <label class="program-features__label" for="vitamins">Витамины</label>
                 </li>
               </ul>
-            </div>
-          </fieldset>
+            </fieldset>
+          </div>
 
           <div class="form__note page-form__container">
             <button class="form__button button" type="submit">Отправить заявку</button>
@@ -159,7 +159,7 @@
       </div>
 
       <div class="page-footer__map map">
-        <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa2be5d25f50f09208cca257403f20f8045a5aef1ec22988fcb36ea76fda191bc&amp;source=constructor" style="width: 100%; height: 362px;" allowfullscreen title="Офис компании по адресу г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8"></iframe>
+        <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa2be5d25f50f09208cca257403f20f8045a5aef1ec22988fcb36ea76fda191bc&amp;source=constructor" style="width: 100%; height: 100%;" allowfullscreen title="Офис компании по адресу г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8"></iframe>
       </div>
 
       <div class="page-footer__links links">
@@ -208,22 +208,7 @@
 
   </footer>
 
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+  <script src="js/script.min.js"></script>
 
   </body>
 </html>

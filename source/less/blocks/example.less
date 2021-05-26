@@ -6,6 +6,10 @@
     padding-top: 42px;
     background: none;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 44px;
+  }
 }
 
 .example__wrapper {
@@ -17,7 +21,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    height: 720px;
+    height: 465px;
     background: @basic-gray;
   }
 }
@@ -28,6 +32,7 @@
     display: grid;
     grid-template-columns: 436px 1fr;
     grid-template-rows: auto auto auto;
+    padding-top: 56px;
   }
 }
 
@@ -36,6 +41,10 @@
 
   @media (min-width: @tablet-width) {
     margin: 0 0 65px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 75px 0;
   }
 }
 
@@ -62,8 +71,8 @@
 .example__photo {
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: -50px;
-    right: 0;
+    top: -245px;
+    right: -75px;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
