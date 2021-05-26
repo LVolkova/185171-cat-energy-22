@@ -1,5 +1,5 @@
 .program-features {
-  margin-bottom: 14px;
+  margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -13,38 +13,114 @@
   }
 }
 
+.program-features__legend {
+  width: 141px;
+  padding-right: 24px;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 211px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    padding-left: 40px;
+    left: -40px;
+  }
+}
+
 .program-features__list {
-  padding: 20px 0;
+  padding: 19px 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    padding: 57px 0 59px 0;
+    padding: 43px 0 19px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 43px 0 24px 0;
   }
 }
 
 .program-features__item {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 41px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     width: 221px;
-    min-height: 40px;
-    margin-right: 123px;
+
+    &:not(:nth-child(2n)) {
+      margin-right: 123px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-right: 0;
-  }
-}
 
-.program-features__item:not(:nth-child(4n)) {
-  @media (min-width: @desktop-width) {
-    margin-right: 104px;
+    &:not(:nth-child(4n)) {
+      margin-right: 104px;
+    }
   }
-}
-
-.program-features__item:not(:last-child) {
-  margin-bottom: 20px;
 }
 
 .program-features__label {
+  position: relative;
   color: @text-title;
+  padding-left: 46px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 59px;
+  }
+}
+
+.program-features__label::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: @input-dark;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    top: -5px;
+  }
+}
+
+.program-features__input:checked + .program-features__label::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 14px;
+  top: 5px;
+  left: 6px;
+  background: url("../img/check-mark.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 8px;
+    left: 11px;
+  }
+}
+
+.program-features__input:hover + .program-features__label::before,
+.program-features__input:focus + .program-features__label::before {
+  border: @input-hover;
+}
+
+.program-features__input:disabled + .program-features__label {
+  opacity: 0.3;
+
+  &::before {
+    border: @input-hover;
+  }
 }

@@ -10,7 +10,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 694px;
+    min-height: 655px;
   }
 }
 
@@ -23,6 +23,11 @@
   background-image: url("../img/promo-cat.png"), linear-gradient(rgba(#63a73c), rgba(#63a73c));
   background-repeat: no-repeat;
   background-position: center, top center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo-cat@2x.png"), linear-gradient(rgba(#63a73c), rgba(#63a73c));
+    background-size: auto 302px, 100% 302px;
+  }
 
   @media (min-width: @tablet-width) {
     background-image: none;
@@ -38,6 +43,11 @@
     background-repeat: no-repeat;
     background-position: right;
     z-index: 2;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-cat-max@2x.png"), linear-gradient(rgba(#64a83d), rgba(#64a83d));
+      background-size: contain;
+    }
   }
 }
 
@@ -45,41 +55,40 @@
   position: relative;
 }
 
-.promo__content::before {
-  @media (min-width: @desktop-width) {
-    position: absolute;
-    top: -76px;
-    right: 0;
-    content: "";
-    width: 719px;
-    height: 694px;
-    background: url("../img/promo-cat-max.jpg") no-repeat;
-  }
-}
-
 .promo__title {
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
   margin: 0;
-  padding: 27px 0 25px 0;
+  padding: 27px 0 12px 0;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
     width: 414px;
-    padding: 62px 0 21px 80px;
+    padding: 50px 0 22px 87px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 98px 0 22px 80px;
   }
 }
 
 .promo__slogan {
   line-height: 14px;
   text-transform: uppercase;
+  margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    padding-left: 87px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
     padding-left: 80px;
+    max-width: 400px;
   }
 }
 
@@ -96,8 +105,8 @@
     width: 552px;
     height: 499px;
     position: absolute;
-    top: 60px;
-    right: 310px;
+    top: 15px;
+    right: 330px;
     z-index: 3;
   }
 }
@@ -109,13 +118,14 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 300px;
-    left: 80px;
+    top: 280px;
+    left: 81px;
     font-size: 20px;
     line-height: 20px;
   }
 
   @media (min-width: @desktop-width) {
+    top: 330px;
     left: 190px;
   }
 }

@@ -13,17 +13,20 @@
 
 .programs__item {
   background-color: @basic-gray;
-  margin-top: 20px;
-  padding: 30px 33px 18px 20px;
+  margin-top: 22px;
+  padding: 30px 20px 18px 20px;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    padding: 77px 278px 53px 52px;
+    margin-top: -2px;
+    padding: 77px 278px 56px 52px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: @desktop-width) {
     width: 570px;
     min-height: 374px;
+    padding: 75px 100px 35px 53px;
   }
 }
 
@@ -34,32 +37,132 @@
 }
 
 .programs__title {
+  position: relative;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
   color: @text-title;
-  margin: 0 0 30px 0;
+  margin: 0 0 29px 71px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin: 0 0 25px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 73px 160px;
+  }
+}
+
+.programs__title::before {
+  position: absolute;
+  top: -6px;
+  left: -69px;
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: @basic-green;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    height: 200px;
+    top: 14px;
+    left: 395px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    height: 100px;
+    top: -31px;
+    left: -160px;
+  }
+}
+
+.programs__title--slim::after {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 50px;
+  top: -9px;
+  left: -62px;
+  background: url("../img/mark_program-slim.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 140px;
+    height: 192px;
+    top: 2px;
+    left: 425px;
+    background-size: 140px 192px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 70px;
+    height: 97px;
+    top: -37px;
+    left: -145px;
+    background-size: 70px 97px;
+  }
+}
+
+.programs__title--pro + .programs__description {
+  @media (min-width: @tablet-width) {
+    width: 342px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 457px;
+  }
+}
+
+.programs__title--pro::after {
+  content: "";
+  position: absolute;
+  width: 67px;
+  height: 28px;
+  top: 5px;
+  left: -78px;
+  background: url("../img/mark_program-pro.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 268px;
+    height: 112px;
+    top: 58px;
+    left: 360px;
+    background-size: 268px 112px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 134px;
+    height: 56px;
+    top: -10px;
+    left: -179px;
+    background-size: 134px 56px;
   }
 }
 
 .programs__description {
-  margin-bottom: 38px;
+  padding-bottom: 21px;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 13px 0 20px 0;
 
   @media (min-width: @tablet-width) {
+    width: 377px;
+    border-bottom: none;
+    margin: 13px 0 30px 0;
     color: @text-title;
   }
 
   @media (min-width: @desktop-width) {
     width: 467px;
+    margin: 13px 0 5px 0;
   }
 }
 
 .programs__link {
+  position: relative;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
@@ -68,5 +171,24 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.programs__link:active {
+  opacity: 0.3;
+}
+
+.programs__link::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: -40px;
+  width: 24px;
+  height: 12px;
+  background: url("../img/icon-arrow.svg") no-repeat, 24px 12px;
+
+  @media (min-width: @tablet-width) {
+    top: 9px;
+    right: -50px;
   }
 }

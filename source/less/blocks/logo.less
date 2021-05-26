@@ -1,6 +1,6 @@
 .logo {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
 
   &:hover,
@@ -14,19 +14,38 @@
 }
 
 .logo__image {
-  margin-right: 50px;
-}
-
-.logo__name {
-  align-self: center;
+  width: 34px;
+  height: 38px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 13px;
+    width: 60px;
+    height: 50px;
   }
 
   @media (min-width: @desktop-width) {
-    align-self: flex-end;
+    width: 70px;
+    height: 59px;
+    padding-bottom: 5px;
+  }
+}
+
+.logo__name {
+  width: 101px;
+  height: 18px;
+  margin-left: 55px;
+  padding-top: 3px;
+
+  @media (min-width: @tablet-width) {
+    width: 101px;
+    height: 19px;
+    margin-left: 12px;
+    padding-top: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 118px;
+    height: 21px;
     padding-top: 0;
-    padding-bottom: 7px;
+    margin-left: 14px;
   }
 }

@@ -1,7 +1,57 @@
-.example__photo {
-  @media (min-width: @desktop-width) {
-    position: absolute;
-    top: -50px;
-    right: 0;
+.photo {
+  position: relative;
+}
+
+.photo__difference {
+
+  /*position: absolute;
+  top: -195px;
+  right: -35px;*/
+}
+
+.photo__container {
+  height: 240px;
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    height: 535px;
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.photo__slide {
+  display: none;
+  margin: 0 auto;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    height: 620px;
+  }
+}
+
+.photo__slide--current {
+  display: block;
+}
+
+.photo__slide--after {
+  @media (min-width: @tablet-width) {
+    height: 520px;
+    width: auto;
+    padding-left: 60px;
+  }
+}
+
+.photo__slide--before {
+  width: 311px;
+  height: 232px;
+  margin-left: -5px;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 520px;
+    width: auto;
+    padding-left: 18px;
   }
 }

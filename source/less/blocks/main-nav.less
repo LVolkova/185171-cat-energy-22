@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #e6e6e6;
 
   @media (min-width: @tablet-width) {
     width: 708px;
@@ -10,15 +11,19 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 14px;
+    border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
     width: 1220px;
     padding: 0 110px;
+    margin-top: 52px;
   }
 }
 
 .main-nav__block {
+  position: relative;
   width: 280px;
   margin: 0 auto;
   display: flex;
@@ -27,10 +32,13 @@
   min-height: 66px;
 
   @media (min-width: @tablet-width) {
-    align-items: flex-end;
+    align-items: center;
+    width: 174px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
+    min-height: 70px;
     width: auto;
     margin: 0;
   }
@@ -60,11 +68,13 @@
     width: 440px;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-self: flex-end;
+    align-self: center;
+    padding-top: 16px;
   }
 
   @media (min-width: @desktop-width) {
     width: 478px;
+    padding-top: 0;
     z-index: 3;
   }
 }
@@ -75,7 +85,7 @@
   line-height: 20px;
   font-weight: 500;
   text-transform: uppercase;
-  padding-top: 22px;
+  padding-top: 21px;
   padding-bottom: 24px;
   border-top: 1px solid #e6e6e6;
 
@@ -103,7 +113,7 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: 3px;
       left: 0;
       right: 0;
       height: 2px;
@@ -143,6 +153,8 @@
 
 
 .main-nav__toggle {
+  width: 18px;
+  height: 18px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -179,7 +191,7 @@
     content: "";
     position: absolute;
     top: 32px;
-    right: 23px;
+    right: 0;
     width: 25px;
     height: 1px;
     background-color: black;

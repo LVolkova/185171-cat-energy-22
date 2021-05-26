@@ -1,13 +1,15 @@
 .form {
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 570px 570px;
     grid-template-rows: repeat(5, auto);
     column-gap: 80px;
+    margin-bottom: 10px;
   }
 }
 
 .form__block {
+  position: relative;
   border: none;
   font-size: 16px;
   text-transform: uppercase;
@@ -30,12 +32,53 @@
   font-size: 24px;
   line-height: 26px;
   color: @text-title;
-  margin-bottom: 15px;
+  margin-bottom: 33px;
+  padding: 0 15px 0 0;
+  background-color: white;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
     margin: 0;
+    padding-right: 40px;
+  }
+}
+
+.form__legend::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, transparent, transparent 50%, @basic-green 50%, @basic-green);
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+    background-image: linear-gradient(to right, transparent, transparent 30%, @basic-green 30%, @basic-green);
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: none;
+  }
+}
+
+.form__legend::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(to left, transparent, transparent calc(50% + 350px), @basic-green calc(50% + 350px), @basic-green);
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: none;
   }
 }
 
@@ -46,24 +89,26 @@
     grid-row-start: 5;
     grid-row-end: 6;
     display: flex;
+    align-items: center;
     margin-bottom: 72px;
   }
 }
 
 .form__button {
   width: 100%;
-  padding: 7px 44px;
+  padding: 10px 44px;
   border: none;
 
   @media (min-width: @tablet-width) {
+    font-size: 20px;
     width: auto;
-    padding: 13px 55px;
+    padding: 16px 65px;
     margin-right: 61px;
   }
 
   @media (min-width: @desktop-width) {
     min-width: 568px;
-    padding: 13px 188px;
+    padding: 16px 188px;
     margin-right: 81px;
   }
 }
@@ -73,4 +118,16 @@
   line-height: 16px;
   color: @text-title;
   text-align: center;
+  margin: 22px 0 32px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    align-self: center;
+    padding-bottom: 7px;
+    margin: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
