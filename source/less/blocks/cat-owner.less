@@ -1,5 +1,5 @@
 .cat-owner {
-  margin: 25px 0 11px 0;
+  margin-top: 25px;
 
   @media (min-width: @tablet-width) {
     margin: 75px 0 0 0;
@@ -15,9 +15,7 @@
 }
 
 .cat-owner__wrapper {
-  @media (min-width: @desktop-width) {
-    border: none;
-  }
+  border: none;
 }
 
 .cat-owner__legend {
@@ -36,8 +34,6 @@
 }
 
 .cat-owner__list {
-  margin: 20px 0 9px 0;
-
   @media (min-width: @tablet-width) {
     margin: 76px 0 65px 0;
   }
@@ -62,11 +58,11 @@
 }
 
 .cat-owner__label {
+  position: relative;
   flex-grow: 0;
 }
 
 .cat-owner__input {
-  position: relative;
   border: @input;
   height: 45px;
   flex-grow: 2;
@@ -124,41 +120,41 @@
 .cat-owner__label--email::after {
   content: "";
   position: absolute;
-  top: 101px;
-  right: 36px;
+  top: 2px;
+  right: -215px;
   width: 18px;
   height: 15px;
   background: url("../img/email-icon.svg") no-repeat;
   z-index: 5;
 
   @media (min-width: @tablet-width) {
-    right: 92px;
-    top: 130px;
+    top: 8px;
+    right: -552px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 128px;
-    right: 670px;
+    top: 8px;
+    right: -489px;
   }
 }
 
 .cat-owner__label--tel::after {
   content: "";
   position: absolute;
-  top: 157px;
-  right: 34px;
+  top: 0;
+  right: -200px;
   width: 20px;
   height: 20px;
   background: url("../img/phone-icon.svg") no-repeat;
   z-index: 5;
 
   @media (min-width: @tablet-width) {
-    right: 90px;
-    top: 200px;
+    top: 6px;
+    right: -532px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 125px;
-    right: 15px;
+    top: 5px;
+    right: -471px;
   }
 }
